@@ -1,0 +1,21 @@
+{
+  "name": "abs-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mingina",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "mongodb": "^3.0.2",
+    "mongoose": "^5.0.6",
+    "moongoose": "0.0.5",
+    "nodemon": "^1.15.1"
+  }
+}

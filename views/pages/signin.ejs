@@ -1,0 +1,25 @@
+<%- contentFor('signin') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <section>
+                    <form>
+                        <label for="email" class="col-form-label"> Email Address </label>
+                        <input type="email" class="form-control" aria-describedby="emailAddress" required>
+
+                        <label for="password" class="col-form-label"> Password </label>
+                        <input type="password" class="form-control" id="pass" required>
+
+                        <div class="col-md-12"><button type="submit" class="btn btn-primary"> Submit </button></div>
+
+                    </form>
+                </section>
+                <section>
+                    <div class="col-lg-12">
+                        <a href="/signin" class="col-6"> I don't have an account </a>
+                        <a href="#" class="col=6"> Forgot Password </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>

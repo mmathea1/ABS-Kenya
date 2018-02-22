@@ -1,0 +1,141 @@
+body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+header.overlay {
+    background: url("../img/landing.jpg");
+
+}
+
+header.masthead {
+    position: relative;
+    background-color: #343a40;
+    background:url(../img/landing.jpg)center center no-repeat;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+header.masthead h1 {
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+}
+
+
+.features-icons .features-icons-item {
+    padding: 1.2rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+}
+
+
+
+
+footer.footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+
+/*custom css*/
+
+.agencies {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.agencies th,
+td {
+    border-bottom: 1px solid #cecfd5;
+    padding: 15px 15px;
+}
+
+.agencies thead {
+    text-align: center;
+    background: #395870;
+    color: #fff;
+}
+
+.agencies tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+.agencies td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+}
+/*.agencies td:first-child {
+  border-left: 1px solid #cecfd5;
+}*/
+
+.accordion-ul li{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-right: 20px;
+    list-style-image: inherit;
+
+}
+
+nav{
+    max-height: inherit;
+}
+
+navbar-brand{
+    font-size: 1px;
+}
+
+.center-justify{
+    padding: 1em;
+    line-height: 2em;
+    text-align: justify;
+    margin: 0 auto;
+    width: 65em;
+}
+
+.accordion-section{
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+}
+
+#categories{
+    display: none;
+}
