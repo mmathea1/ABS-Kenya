@@ -9,6 +9,7 @@
   "author": "Mingina",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0-alpha.6",
     "ejs": "^2.5.7",
     "express": "^4.16.2",

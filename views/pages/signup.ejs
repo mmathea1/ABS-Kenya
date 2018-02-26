@@ -3,41 +3,41 @@
         <div class="row">
             <div class="col-md-6">
                 <section>
-                    <form method="post" action="/signupmodel">
+                    <form method="POST" action="/register">
                         <label for="fname" class="col-form-label"> First Name </label>
-                        <input type="text" class="form-control" aria-describedby="firstName" required />
+                        <input type="text" class="form-control" aria-describedby="firstName" id="fname" name="fname" required />
 
                         <label for="lname" class="col-form-label"> Last Name </label>
-                        <input type="text" class="form-control" aria-describedby="lastName" required />
+                        <input type="text" class="form-control" aria-describedby="lastName" id="lname" name="lname" required />
 
                         <label for="idno" class="col-form-label"> ID Number </label>
-                        <input type="text" class="form-control" aria-describedby="IDNumber">
+                        <input type="text" class="form-control" aria-describedby="IDNumber" id="idnum" name="idnum" required>
                         <small id="idHelp" class="form-text text-muted"> Enter your Passport Number if you are not a Kenyan Citizen</small>
 
 
                         <label for="email" class="col-form-label"> Email Address </label>
-                        <input type="email" class="form-control" aria-describedby="emailAddress" required>
+                        <input type="email" class="form-control" aria-describedby="emailAddress" id="email" name="email" required>
 
                         <label for="phone" class="col-form-label"> Mobile Number </label>
-                        <input type="tel" class="form-control" aria-describedby="phoneNumber" required />
+                        <input type="tel" class="form-control" aria-describedby="phoneNumber" id="mobile" name="mobile" required />
                         <div class="form-group">
                             <legend> Gender </legend>
                             <label for="female" class="form-check-label">
                         <input type="radio" class="form-check-input " name="gender" id="female" value="female" required /> Female </label>
 
                             <label for="male" class="form-check-label">
-                        <input type="radio" class="form-check-input" name="gender" id="male" value="male" required /> Male </label>
+                        <input type="radio" class="form-check-input" name="gender" id="male" value="male" /> Male </label>
                         </div>
 
                         <label for="countrySelect"> Country </label>
-                        <input type="text" class="form-control" name="" id="country" required />
+                        <input type="text" class="form-control" name="country" id="country" required />
                         <input type="hidden" class="form-control" id="country_code" />
 
                         <label for="password" class="col-form-label"> Password</label>
-                        <input type="password" class="form-control" id="pass" required>
+                        <input type="password" class="form-control" id="pass" name="pass" required>
 
                         <label for="Rpassword" class="col-form-label"> Repeat Password</label>
-                        <input type="password" class="form-control" id="rpass" required>
+                        <input type="password" class="form-control" id="rpass" name="rpass" required>
 
 
                         <div class="form-group">
