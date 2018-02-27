@@ -1,8 +1,7 @@
 var mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
 
-var ApplicantSchema = new Schema({
+var ApplicantSchema = new mongoose.Schema({
     fname: {
         type: String,
         required: true,
@@ -45,6 +44,17 @@ var ApplicantSchema = new Schema({
     }
 });
 
+ApplicantSchema.pre('save', function (next) {
+    var applicant = this;
+    bcrypt.hash(applicant.pass, 10, function (err, hash) {
+        if (err) {
+            return next(err);
+        }
+        applicant.pass = hash;
+        next();
+    });
+
+});
 
 //export module
 var Applicant = mongoose.model('Applicant', ApplicantSchema);

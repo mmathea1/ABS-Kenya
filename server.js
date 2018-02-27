@@ -10,6 +10,7 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({
     extended: true
 }));
+
 //express layouts
 app.set('view engine', 'ejs');
 app.use(explayout);

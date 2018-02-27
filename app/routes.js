@@ -1,8 +1,10 @@
 var express = require('express');
 var path = require('path');
+//require('express-session');
 
 var Applicant = require('../models/register');
-
+var oldApplicant = require('../models/login');
+var bcrypt = require('bcrypt');
 //create router object
 var router = express.Router();
 
@@ -17,8 +19,8 @@ router.get('/info', function (req, res) {
     res.render('pages/info');
 });
 
-router.get('/signup', function (req, res) {
-    res.render('pages/signup');
+router.get('/register', function (req, res) {
+    res.render('pages/register');
 });
 
 router.post('/register', function (req, res) {
@@ -42,10 +44,33 @@ router.post('/register', function (req, res) {
         });
 });
 
-router.get('/signin', function (req, res) {
-    res.render('pages/signin');
+router.get('/login', function (req, res) {
+    res.render('pages/login');
 });
 
-router.post('/signin', function (req, res) {
-    res.send('Sign In sent!');
+router.post('/login', function (req, res) {
+
+    //fetch user
+    var email = req.body.email;
+    var pass = req.body.pass;
+
+    Applicant.findOne({
+        email: email
+    }, function (err, applicant) {
+        if (err) {
+            return (err);
+        } else if (!applicant) {
+            var err = new Error('User not found!');
+            err.status = 401;
+            console.log(err);
+        }
+        bcrypt.compare(pass, Applicant.pass, function (err, result) {
+            if (result === true) {
+                return (null, applicant);
+            } else {
+                return "callback(something)";
+            }
+        });
+    })
+
 });
